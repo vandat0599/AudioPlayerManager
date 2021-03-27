@@ -262,10 +262,10 @@ open class AudioPlayerManager: NSObject {
 	}
 
 	// MARK: - Internal helper
-
+    open var trackDidFinishPlayingCallback: (() -> Void)?
 	@objc
 	open func trackDidFinishPlaying() {
-		self.forward()
+		self.trackDidFinishPlayingCallback?()
 	}
 
 	// MARK: - Playback time change callback

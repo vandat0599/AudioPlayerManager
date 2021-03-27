@@ -202,7 +202,7 @@
 			};
 			buildConfigurationList = 3A4866061D50A7D700CC4A04 /* Build configuration list for PBXProject "AudioPlayerManager" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
