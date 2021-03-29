@@ -23,7 +23,7 @@ class AudioTracksQueue: NSObject {
 	}
 
 	fileprivate var queue					= [AudioTrack]()
-	fileprivate var currentItemQueueIndex	= 0
+    var currentItemQueueIndex	= 0
 
 	fileprivate var history					= [AudioTrack]()
 
@@ -114,6 +114,11 @@ class AudioTracksQueue: NSObject {
 	func count() -> Int {
 		return self.queue.count
 	}
+    
+    func currentIndex() -> Int {
+        guard let currentTrack = currentTrack else { return 0}
+        return queue.index(of: currentTrack) ?? 0
+    }
 
 	// History
 

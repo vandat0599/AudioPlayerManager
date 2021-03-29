@@ -71,6 +71,10 @@ open class AudioPlayerManager: NSObject {
 	open var currentTrack						: AudioTrack? {
 		return self.queue.currentTrack
 	}
+    
+    open var playingIndex: Int {
+        return self.queue.currentIndex()
+    }
 
 	// MARK: - Initializaiton
 

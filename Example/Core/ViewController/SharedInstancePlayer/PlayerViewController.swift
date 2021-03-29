@@ -33,7 +33,6 @@ class PlayerViewController: UIViewController {
 
 		// Listen to the player state updates. This state is updated if the play, pause or queue state changed.
 		AudioPlayerManager.shared.addPlayStateChangeCallback(self, callback: { [weak self] (track: AudioTrack?) in
-
 			self?.updateButtonStates()
 			self?.updateSongInformation(with: track)
 		})
